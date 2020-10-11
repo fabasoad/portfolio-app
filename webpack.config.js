@@ -20,9 +20,11 @@ module.exports = {
             test: /\.s?css$/
         }]
     },
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval-nosources-cheap-module-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
+        compress: true,
+        port: 9000,
         historyApiFallback: true
     }
 };
